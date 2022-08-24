@@ -1,3 +1,10 @@
+[core]
+  excludesfile = ~/.gitignore
+  ignorecase = false
+  pager = less -FRSX
+	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
+	autocrlf = input
+
 [color]
   branch = auto
   diff = auto
@@ -9,19 +16,20 @@
   current = green
   remote = yellow
 
-[core]
-  pager = less -FRSX
-	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
-
 [alias]
+  g = git
+  p = pull
+  d = !git --no-pager diff
   co = checkout
+  ci = commit
+  cm = commit -m
   st = status -sb
   br = branch
-  ci = commit
+  ba = branch -a
   fo = fetch origin
-  d = !git --no-pager diff
   dt  = difftool
   stat = !git --no-pager diff --stat
+  open = "!hub browse"
 
   # Clean merged branches
   sweep = !git branch --merged master | grep -v 'master$' | xargs git branch -d && git remote prune origin
@@ -38,6 +46,9 @@
   # Removes a file from the index
   unstage = reset HEAD --
 
+[github]
+	user = Calligramien
+
 [help]
   autocorrect = 1
 
@@ -50,5 +61,11 @@
 [pull]
   rebase = false
 [user]
-	email = dmngautier@gmail.com
-	name = Damien Gautier
+	email = 82036710+Calligramien@users.noreply.github.com
+	name = Damien
+	name = Damien
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

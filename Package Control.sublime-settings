@@ -23,5 +23,5 @@
 		"SublimeLinter",
 		"SublimeLinter-flake8",
 		"SublimeLinter-rubocop"
-	]
+	],
 }
