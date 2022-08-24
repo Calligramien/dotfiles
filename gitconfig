@@ -34,7 +34,7 @@
   sweep = !git branch --merged master | grep -v 'master$' | xargs git branch -d && git remote prune origin
 
   # Clean merged branches and update remote repository
-  p = git pull --prune
+  p = !git pull --prune
 
 
   # http://www.jukie.net/bart/blog/pimping-out-git-log
@@ -45,6 +45,8 @@
   serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 
   m = checkout master
+
+  ##
 
   # Removes a file from the index
   unstage = reset HEAD --
