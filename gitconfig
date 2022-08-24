@@ -2,7 +2,7 @@
   excludesfile = ~/.gitignore
   ignorecase = false
   pager = less -FRSX
-	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
+	editor = code --wait
 	autocrlf = input
 
 [color]
