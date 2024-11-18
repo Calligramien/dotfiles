@@ -2,7 +2,7 @@
   excludesfile = ~/.gitignore
   ignorecase = false
   pager = less -FRSX
-	editor = code --wait
+	editor = subl -n -w  >/dev/null 2>&1
 	autocrlf = input
 
 [color]
@@ -66,8 +66,8 @@
 [pull]
   rebase = false
 [user]
-  name = Damien Gautier
-	email = 82036710+Calligramien@users.noreply.github.com
+	name = Damien Gautier
+	email = dmngautier@gmail.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
